@@ -50,8 +50,8 @@ def filterPC(points, distances_dict, thresh):
     return inliers, outliers
 
 def plotFilteredPoints(f1,f2):
-    inliers=pd.read_csv(f1,delimiter='-')
-    outliers=pd.read_csv(f2,delimiter='-')
+    inliers=np.loadtxt(f1,delimiter='-')
+    outliers=np.loadtxt(f2,delimiter='-')
     
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
